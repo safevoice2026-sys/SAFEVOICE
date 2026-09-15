@@ -1,0 +1,1103 @@
+/* =========================================================
+   SAFEVOICE - DISEÑO VISUAL
+   Mantiene las clases e IDs usados por script.js
+   ========================================================= */
+
+:root {
+    --azul: #1565c0;
+    --azul-oscuro: #0d3b66;
+    --azul-claro: #eaf5ff;
+    --celeste: #dff3ff;
+    --celeste-fuerte: #42a5f5;
+    --blanco: #ffffff;
+    --texto: #26364a;
+    --texto-suave: #60758a;
+    --borde: #d8e7f3;
+    --verde: #2e9d69;
+    --rojo: #d94b4b;
+    --amarillo: #f4b942;
+    --sombra: 0 8px 25px rgba(21, 101, 192, 0.10);
+    --radio: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #f3f9ff 0%, #eef6fc 55%, #f8fbfd 100%);
+    color: var(--texto);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.encabezado {
+    width: 100%;
+    min-height: 145px;
+    padding: 14px clamp(18px, 4vw, 60px);
+
+    background-image: url("fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-bottom: 3px solid #4ca7ee;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.35fr) minmax(240px, 1fr);
+    align-items: center;
+    gap: clamp(18px, 3vw, 45px);
+    box-shadow: 0 4px 18px rgba(21, 101, 192, 0.10);
+    position: relative;
+    overflow: hidden;
+}
+
+.marca-institucion,
+.marca-producto,
+.marca-equipo {
+    display: flex;
+    align-items: center;
+}
+
+.marca-institucion {
+    justify-content: flex-start;
+    gap: 13px;
+}
+
+.marca-institucion img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.texto-institucion {
+    display: flex;
+    flex-direction: column;
+    color: var(--azul-oscuro);
+    line-height: 1.2;
+}
+
+.texto-institucion strong {
+    font-size: 15px;
+}
+
+.texto-institucion span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.texto-institucion small {
+    margin-top: 4px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.marca-producto {
+    justify-content: center;
+    text-align: center;
+}
+
+.texto-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-producto h1 {
+    margin: 0;
+    color: var(--azul-oscuro);
+    font-size: clamp(38px, 4.2vw, 52px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.texto-producto p {
+    margin: 7px 0 7px;
+    padding: 5px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--azul-oscuro);
+    font-size: clamp(15px, 1.7vw, 20px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.texto-producto span {
+    color: var(--azul);
+    font-size: clamp(12px, 1.35vw, 15px);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.texto-producto b {
+    margin: 0 7px;
+    color: var(--celeste-fuerte);
+}
+
+.marca-equipo {
+    justify-content: flex-end;
+}
+
+.marca-equipo img {
+    width: min(190px, 100%);
+    max-height: 90px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.contenido {
+    width: min(94%, 1080px);
+    margin: 34px auto 45px;
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 8px 12px 25px;
+}
+
+.bienvenida h2 {
+    color: var(--azul-oscuro);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.bienvenida h2::first-letter {
+    color: var(--azul);
+}
+
+.bienvenida p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 16px;
+}
+
+/* =========================================================
+   TARJETA APRENDE Y PREVIENE
+   ========================================================= */
+
+.infografia {
+    background: var(--blanco);
+    border: 1px solid rgba(76, 167, 238, 0.16);
+    border-radius: var(--radio);
+    padding: clamp(22px, 4vw, 32px);
+    box-shadow: var(--sombra);
+}
+
+.infografia-contenido > h2 {
+    color: var(--azul);
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.infografia h3 {
+    color: var(--azul-oscuro);
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.consejos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.consejos > div {
+    min-height: 145px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--borde);
+    background: linear-gradient(145deg, #f9fcff, #eef7ff);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consejos > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(21, 101, 192, 0.10);
+}
+
+.consejos > div:nth-child(1) {
+    border-top: 4px solid #ef476f;
+}
+
+.consejos > div:nth-child(2) {
+    border-top: 4px solid var(--amarillo);
+}
+
+.consejos > div:nth-child(3) {
+    border-top: 4px solid #7e57c2;
+}
+
+.consejos strong {
+    display: block;
+    color: var(--azul-oscuro);
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.consejos p {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* =========================================================
+   PUBLICACIÓN DINÁMICA
+   ========================================================= */
+
+.infografia-publicada {
+    background: var(--blanco);
+    border: 1px solid rgba(76, 167, 238, 0.16);
+    border-radius: var(--radio);
+    padding: clamp(20px, 4vw, 32px);
+    margin-top: 25px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.infografia-publicada h2 {
+    color: var(--azul);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.infografia-publicada img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 650px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.infografia-publicada p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* =========================================================
+   REPORTAR
+   ========================================================= */
+
+.reportar {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #ffffff 0%, #edf8ff 100%);
+    border: 1px solid #cfe7f8;
+    text-align: center;
+    padding: clamp(25px, 5vw, 35px);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.reportar h2 {
+    color: var(--azul);
+    font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 8px;
+}
+
+.reportar p {
+    color: var(--texto-suave);
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #1976d2, #1257a5);
+    color: white;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(21, 101, 192, 0.18);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1565c0, #0d47a1);
+    box-shadow: 0 7px 16px rgba(21, 101, 192, 0.24);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================================================
+   FORMULARIO DE REPORTE Y DNI
+   ========================================================= */
+
+.formulario-reporte,
+.solicitud-dni,
+.acceso-admin {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: clamp(22px, 4vw, 32px);
+    margin-top: 25px;
+    box-shadow: var(--sombra);
+}
+
+.formulario-reporte h2,
+.solicitud-dni h2,
+.acceso-admin h2 {
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.formulario-reporte > p,
+.acceso-admin > p {
+    color: var(--texto-suave);
+    margin-bottom: 22px;
+}
+
+.formulario-reporte label,
+.solicitud-dni label,
+.acceso-admin label,
+.seccion-publicacion label {
+    display: block;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    margin-top: 17px;
+    margin-bottom: 7px;
+}
+
+.formulario-reporte input,
+.formulario-reporte select,
+.formulario-reporte textarea,
+.solicitud-dni input,
+.acceso-admin input,
+.seccion-publicacion input[type="text"],
+.seccion-publicacion textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #cbdbe8;
+    border-radius: 9px;
+    background: #fbfdff;
+    color: var(--texto);
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario-reporte input:focus,
+.formulario-reporte select:focus,
+.formulario-reporte textarea:focus,
+.solicitud-dni input:focus,
+.acceso-admin input:focus,
+.seccion-publicacion input[type="text"]:focus,
+.seccion-publicacion textarea:focus {
+    border-color: var(--celeste-fuerte);
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.13);
+}
+
+.formulario-reporte textarea,
+.seccion-publicacion textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formulario-reporte button,
+.acceso-admin button {
+    margin-top: 23px;
+}
+
+.solicitud-dni {
+    text-align: center;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solicitud-dni p {
+    max-width: 560px;
+    margin: 0 auto 12px;
+    color: var(--texto-suave);
+}
+
+.solicitud-dni strong {
+    color: var(--azul-oscuro);
+}
+
+.solicitud-dni label {
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solicitud-dni input {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.solicitud-dni button {
+    display: block;
+    margin: 23px auto 0;
+}
+
+/* =========================================================
+   ACCESO ADMINISTRATIVO
+   ========================================================= */
+
+.acceso-admin {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.acceso-admin label {
+    text-align: left;
+}
+
+.acceso-admin button {
+    width: 100%;
+}
+
+/* =========================================================
+   PANEL DEL DIRECTOR
+   ========================================================= */
+
+.panel-director {
+    width: 100%;
+    max-width: 1080px;
+    margin: 30px auto;
+}
+
+.bienvenida-director {
+    background: var(--blanco);
+    padding: clamp(22px, 4vw, 32px);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    text-align: center;
+    box-shadow: var(--sombra);
+    margin-bottom: 25px;
+}
+
+.bienvenida-director h2 {
+    color: var(--azul);
+    margin-bottom: 13px;
+}
+
+.bienvenida-director p {
+    max-width: 800px;
+    margin: 0 auto 8px;
+    color: var(--texto-suave);
+}
+
+.opciones-director {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.opcion-director {
+    background: var(--blanco);
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.icono-opcion {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--azul-claro);
+    font-size: 31px;
+}
+
+.opcion-director h3 {
+    color: var(--azul);
+    margin-bottom: 8px;
+}
+
+.opcion-director p {
+    color: var(--texto-suave);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.boton-cerrar-sesion {
+    display: block;
+    margin: 28px auto 0;
+    background: #c83d3d;
+}
+
+.boton-cerrar-sesion:hover {
+    background: #a92e2e;
+}
+
+/* =========================================================
+   REPORTES
+   ========================================================= */
+
+.seccion-reportes,
+.seccion-publicacion {
+    margin-top: 25px;
+}
+
+.seccion-reportes h2,
+.seccion-publicacion > h2 {
+    color: var(--azul);
+    margin-bottom: 18px;
+}
+
+.tarjeta-reporte {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--azul);
+    border-radius: 13px;
+    padding: 20px;
+    margin-bottom: 17px;
+    box-shadow: 0 5px 16px rgba(21, 101, 192, 0.08);
+}
+
+.cabecera-reporte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.cabecera-reporte strong {
+    color: var(--azul);
+    font-size: 17px;
+}
+
+.estado-reporte {
+    background: #fff4cf;
+    color: #7b5a00;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.descripcion-reporte {
+    background: #f5f9fc;
+    border-radius: 9px;
+    padding: 13px;
+    margin: 14px 0;
+}
+
+.descripcion-reporte p {
+    margin-top: 7px;
+}
+
+.dni-reporte {
+    background: #eef4f8;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-reporte small {
+    color: #748494;
+}
+
+.acciones-reporte {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.acciones-reporte button,
+.boton-detalle {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.boton-detalle,
+.boton-atras {
+    background: #607d8b;
+}
+
+.boton-detalle:hover,
+.boton-atras:hover {
+    background: #455a64;
+}
+
+.boton-eliminar-reporte,
+.boton-eliminar {
+    background: #c83d3d !important;
+}
+
+.boton-eliminar-reporte:hover,
+.boton-eliminar:hover {
+    background: #a92e2e !important;
+}
+
+.sin-reportes {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--texto-suave);
+}
+
+.boton-atras {
+    margin-top: 10px;
+    padding: 11px 20px;
+}
+
+/* =========================================================
+   PUBLICACIONES DEL DIRECTOR
+   ========================================================= */
+
+.publicacion-actual,
+.nueva-publicacion {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 5px 16px rgba(21, 101, 192, 0.07);
+}
+
+.publicacion-actual {
+    margin-bottom: 24px;
+}
+
+.publicacion-actual h3,
+.nueva-publicacion h3 {
+    color: var(--azul);
+}
+
+.vista-publicacion {
+    text-align: center;
+}
+
+.vista-publicacion h4 {
+    color: var(--azul-oscuro);
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.vista-publicacion img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+    margin: 10px auto 16px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.vista-publicacion p {
+    color: var(--texto-suave);
+    text-align: left;
+    line-height: 1.6;
+}
+
+.botones-publicacion-actual,
+.botones-publicacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.boton-editar,
+.boton-eliminar {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton-editar {
+    background: var(--azul);
+}
+
+.boton-editar:hover {
+    background: #0d47a1;
+}
+
+.boton-eliminar {
+    background: #c83d3d;
+}
+
+.boton-eliminar:hover {
+    background: #a92e2e;
+}
+
+.nueva-publicacion > p {
+    color: var(--texto-suave);
+    margin-top: 5px;
+}
+
+.seccion-publicacion input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px dashed #b9cfdf;
+    border-radius: 9px;
+    background: #f8fbfd;
+}
+
+.imagen-actual-edicion {
+    margin: 12px 0 15px;
+    text-align: center;
+}
+
+.imagen-actual-edicion p {
+    margin-bottom: 8px;
+    color: var(--texto-suave);
+    font-weight: 700;
+}
+
+.imagen-actual-edicion img {
+    width: auto;
+    max-width: 100%;
+    max-height: 190px;
+    border-radius: 9px;
+    border: 1px solid var(--borde);
+}
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    margin-top: 45px;
+    background: linear-gradient(135deg, #0d3b66, #102d4a);
+    color: white;
+    padding: 25px 20px;
+    border-top: 4px solid #4ca7ee;
+}
+
+.footer-contenido {
+    width: min(94%, 1080px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 22px;
+}
+
+.footer-contenido > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-contenido strong {
+    font-size: 13px;
+}
+
+.footer-contenido span {
+    color: #d9e9f6;
+    font-size: 12px;
+}
+
+.footer-producto,
+.footer-equipo {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    padding-left: 20px;
+}
+
+.boton-admin {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    margin-top: 0;
+    padding: 9px 14px;
+    font-size: 13px;
+    box-shadow: none;
+    white-space: nowrap;
+}
+
+.boton-admin:hover {
+    background: white;
+    color: var(--azul-oscuro);
+    box-shadow: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .encabezado {
+        grid-template-columns: 1fr 1.3fr 0.8fr;
+        gap: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .texto-institucion strong,
+    .texto-institucion span {
+        font-size: 12px;
+    }
+
+    .marca-institucion img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .texto-producto h1 {
+        font-size: 40px;
+    }
+
+    .texto-producto p {
+        font-size: 15px;
+    }
+
+    .marca-equipo img {
+        max-height: 72px;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-producto,
+    .footer-equipo {
+        border-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .encabezado {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "producto producto"
+            "institucion equipo";
+        padding: 15px;
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .marca-producto {
+        grid-area: producto;
+    }
+
+    .marca-institucion {
+        grid-area: institucion;
+        justify-content: flex-start;
+    }
+
+    .marca-equipo {
+        grid-area: equipo;
+        justify-content: flex-end;
+    }
+
+    .texto-producto h1 {
+        font-size: 38px;
+    }
+
+    .texto-producto p {
+        font-size: 14px;
+    }
+
+    .texto-producto span {
+        font-size: 12px;
+    }
+
+    .marca-institucion img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .texto-institucion strong,
+    .texto-institucion span {
+        font-size: 11px;
+    }
+
+    .texto-institucion small {
+        font-size: 10px;
+    }
+
+    .marca-equipo img {
+        width: min(145px, 100%);
+        max-height: 62px;
+    }
+
+    .contenido {
+        width: 92%;
+        margin-top: 24px;
+    }
+
+    .bienvenida {
+        padding-bottom: 20px;
+    }
+
+    .bienvenida p {
+        font-size: 14px;
+    }
+
+    .consejos,
+    .opciones-director {
+        grid-template-columns: 1fr;
+    }
+
+    .consejos > div {
+        min-height: auto;
+    }
+
+    .infografia-publicada,
+    .infografia,
+    .reportar,
+    .formulario-reporte,
+    .solicitud-dni,
+    .acceso-admin,
+    .bienvenida-director,
+    .opcion-director,
+    .publicacion-actual,
+    .nueva-publicacion {
+        padding: 20px;
+    }
+
+    .cabecera-reporte {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .acciones-reporte button,
+    .boton-detalle {
+        flex: 1 1 auto;
+    }
+
+    .botones-publicacion-actual,
+    .botones-publicacion {
+        flex-direction: column;
+    }
+
+    .botones-publicacion-actual button,
+    .botones-publicacion button,
+    .boton-atras,
+    .boton-editar,
+    .boton-eliminar {
+        width: 100%;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-contenido > div {
+        align-items: center;
+    }
+
+    .footer-producto,
+    .footer-equipo {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 12px;
+    }
+
+    .boton-admin {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .encabezado {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "producto"
+            "institucion"
+            "equipo";
+        text-align: center;
+    }
+
+    .marca-institucion,
+    .marca-equipo {
+        justify-content: center;
+    }
+
+    .marca-institucion {
+        flex-direction: column;
+    }
+
+    .texto-institucion {
+        align-items: center;
+    }
+
+    .texto-producto h1 {
+        font-size: 34px;
+    }
+
+    .texto-producto p {
+        font-size: 13px;
+        padding: 4px 12px;
+    }
+
+    .texto-producto span {
+        font-size: 11px;
+    }
+
+    .texto-producto b {
+        margin: 0 4px;
+    }
+
+    .marca-equipo img {
+        width: 150px;
+    }
+
+    .reportar button,
+    .formulario-reporte button,
+    .solicitud-dni button,
+    .acceso-admin button {
+        width: 100%;
+    }
+}

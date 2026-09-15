@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeVoice - I.E. José Buenaventura Sepúlveda Fernández</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="marca-institucion">
+            <img
+                src="insignia.png"
+                alt="Insignia de la I.E. José Buenaventura Sepúlveda Fernández"
+            >
+            <div class="texto-institucion">
+                <strong>I.E. José Buenaventura</strong>
+                <span>Sepúlveda Fernández</span>
+                <small>Cañete</small>
+            </div>
+        </div>
+
+        <div class="marca-producto">
+            <div class="texto-producto">
+                <h1>SafeVoice</h1>
+                <p>Poniendo un alto al bullying</p>
+                <span>Respeta <b>•</b> Escucha <b>•</b> Actúa</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <!-- BIENVENIDA -->
+        <section class="bienvenida">
+
+            <h2>Bienvenidos a SafeVoice</h2>
+
+            <p>
+                Un espacio seguro para comunicar situaciones relacionadas
+                con el bullying y encontrar orientación.
+            </p>
+
+        </section>
+
+
+        <!-- APRENDE Y PREVIENE -->
+        <section class="infografia">
+
+            <div class="infografia-contenido">
+
+                <h2>🧠 Aprende y previene</h2>
+
+                <h3>¿Qué podemos hacer frente al bullying?</h3>
+
+                <div class="consejos">
+
+                    <div>
+                        <strong>🛑 No guardes silencio</strong>
+
+                        <p>
+                            Comunica la situación a un adulto de confianza.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <strong>🤝 Apoya a tus compañeros</strong>
+
+                        <p>
+                            Escucha y acompaña a quien necesite ayuda.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <strong>💬 Habla con alguien</strong>
+
+                        <p>
+                            Pedir ayuda es una forma de cuidarnos.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN PUBLICADA -->
+        <section
+        id="seccionInfografia"
+         class="infografia-publicada"
+         style="display: none;"
+>
+
+         <h2 id="tituloInfografia"></h2>
+
+         <img
+        id="imagenInfografia"
+        src=""
+        alt="Infografía de prevención"
+    >
+
+        <p id="descripcionInfografia"></p>
+
+        </section>
+
+
+        <!-- REPORTAR -->
+        <section class="reportar">
+
+            <h2>¿Necesitas comunicar una situación?</h2>
+
+            <p>
+                Puedes comunicarla de manera confidencial.
+            </p>
+
+            <button onclick="mostrarFormulario()">
+                📢 Reportar una situación
+            </button>
+
+        </section>
+
+
+        <!-- FORMULARIO DE REPORTE -->
+        <section
+            id="formularioReporte"
+            class="formulario-reporte"
+            style="display: none;"
+        >
+
+            <h2>📢 Comunicar una situación</h2>
+
+            <p>
+                Cuéntanos lo que ocurrió. La información será tratada
+                de manera confidencial.
+            </p>
+
+
+            <label for="tipoSituacion">
+                ¿Qué tipo de situación ocurrió?
+            </label>
+
+            <select id="tipoSituacion">
+
+                <option value="">
+                    Selecciona una opción
+                </option>
+
+                <option value="Bullying verbal">
+                    Bullying verbal
+                </option>
+
+                <option value="Bullying físico">
+                    Bullying físico
+                </option>
+
+                <option value="Exclusión o rechazo">
+                    Exclusión o rechazo
+                </option>
+
+                <option value="Bullying en internet">
+                    Bullying en internet
+                </option>
+
+                <option value="Otra situación">
+                    Otra situación
+                </option>
+
+            </select>
+
+
+            <label for="gradoSeccion">
+                👥 Grado y sección de los involucrados
+            </label>
+
+            <select id="gradoSeccion">
+
+                <option value="">
+                    Selecciona una opción
+                </option>
+
+                <option value="1.° A">1.° A</option>
+                <option value="1.° B">1.° B</option>
+                <option value="1.° C">1.° C</option>
+                <option value="1.° D">1.° D</option>
+                <option value="1.° E">1.° E</option>
+
+                <option value="2.° A">2.° A</option>
+                <option value="2.° B">2.° B</option>
+                <option value="2.° C">2.° C</option>
+                <option value="2.° D">2.° D</option>
+                <option value="2.° E">2.° E</option>
+
+                <option value="3.° A">3.° A</option>
+                <option value="3.° B">3.° B</option>
+                <option value="3.° C">3.° C</option>
+                <option value="3.° D">3.° D</option>
+                <option value="3.° E">3.° E</option>
+
+                <option value="4.° A">4.° A</option>
+                <option value="4.° B">4.° B</option>
+                <option value="4.° C">4.° C</option>
+                <option value="4.° D">4.° D</option>
+                <option value="4.° E">4.° E</option>
+
+                <option value="5.° A">5.° A</option>
+                <option value="5.° B">5.° B</option>
+                <option value="5.° C">5.° C</option>
+                <option value="5.° D">5.° D</option>
+                <option value="5.° E">5.° E</option>
+
+                <option value="No lo sé">
+                    No lo sé
+                </option>
+
+            </select>
+
+
+            <label for="lugarSituacion">
+                ¿Dónde ocurrió?
+            </label>
+
+            <input
+                type="text"
+                id="lugarSituacion"
+                placeholder="Ejemplo: patio, aula, pasillo..."
+            >
+
+
+            <label for="fechaSituacion">
+                ¿Cuándo ocurrió?
+            </label>
+
+            <input
+                type="date"
+                id="fechaSituacion"
+            >
+
+
+            <label for="descripcionSituacion">
+                ¿Qué sucedió?
+            </label>
+
+            <textarea
+                id="descripcionSituacion"
+                rows="5"
+                placeholder="Describe brevemente lo ocurrido..."
+            ></textarea>
+
+
+            <button onclick="mostrarSolicitudDNI()">
+                ENVIAR REPORTE
+            </button>
+
+        </section>
+
+
+        <!-- SOLICITUD DE DNI -->
+        <section
+            id="solicitudDNI"
+            class="solicitud-dni"
+            style="display: none;"
+        >
+
+            <h2>🔒 Antes de enviar</h2>
+
+            <p>
+                Para dar mayor veracidad a tu comunicación,
+                necesitamos solicitar tu número de DNI.
+            </p>
+
+            <p>
+                <strong>
+                    Tu DNI será tratado de manera confidencial
+                    y no será mostrado a otros estudiantes
+                    ni a la persona involucrada en el reporte.
+                </strong>
+            </p>
+
+
+            <label for="dniEstudiante">
+                Número de DNI
+            </label>
+
+            <input
+                type="text"
+                id="dniEstudiante"
+                maxlength="8"
+                placeholder="Ingresa tu DNI"
+            >
+
+
+            <button onclick="enviarReporte()">
+                CONFIRMAR Y ENVIAR
+            </button>
+
+        </section>
+
+
+        <!-- ACCESO ADMINISTRATIVO -->
+        <section
+            id="accesoAdmin"
+            class="acceso-admin"
+            style="display: none;"
+        >
+
+            <h2>🔐 Acceso administrativo</h2>
+
+            <p>
+                Ingrese sus credenciales para acceder al panel
+                de SafeVoice.
+            </p>
+
+
+            <label for="usuarioAdmin">
+                Usuario
+            </label>
+
+            <input
+                type="text"
+                id="usuarioAdmin"
+                placeholder="Ingrese su usuario"
+            >
+
+
+            <label for="contrasenaAdmin">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="contrasenaAdmin"
+                placeholder="Ingrese su contraseña"
+            >
+
+
+            <button onclick="ingresarAdministrador()">
+                INGRESAR
+            </button>
+
+        </section>
+
+
+        <!-- PANEL DEL DIRECTOR -->
+        <section
+            id="panelDirector"
+            class="panel-director"
+            style="display: none;"
+        >
+
+            <!-- BIENVENIDA DEL DIRECTOR -->
+            <div class="bienvenida-director">
+
+                <h2>👋 Hola, Director</h2>
+
+                <p>
+                    Bienvenido al panel de administración de SafeVoice.
+                </p>
+
+                <p>
+                    Desde aquí podrá revisar las comunicaciones e
+                    incidencias reportadas por los estudiantes y
+                    publicar información para la prevención del bullying.
+                </p>
+
+            </div>
+
+
+            <!-- OPCIONES DEL DIRECTOR -->
+            <div class="opciones-director">
+
+                <!-- REVISAR REPORTES -->
+                <div class="opcion-director">
+
+                    <div class="icono-opcion">
+                        📋
+                    </div>
+
+                    <h3>
+                        Revisar reportes
+                    </h3>
+
+                    <p>
+                        Consulte las comunicaciones recibidas
+                        y revise la información proporcionada.
+                    </p>
+
+                    <button onclick="mostrarReportes()">
+                        VER REPORTES
+                    </button>
+
+                </div>
+
+
+                <!-- PUBLICAR INFORMACIÓN -->
+                <div class="opcion-director">
+
+                    <div class="icono-opcion">
+                        📰
+                    </div>
+
+                    <h3>
+                        Publicar información
+                    </h3>
+
+                    <p>
+                        Publique consejos, recomendaciones o
+                        infografías para prevenir el bullying.
+                    </p>
+
+                    <button onclick="mostrarPublicacion()">
+                        PUBLICAR INFORMACIÓN
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECCIÓN DE REPORTES -->
+            <div
+                id="seccionReportes"
+                class="seccion-reportes"
+                style="display: none;"
+            >
+
+                <h2>
+                    📋 Reportes recibidos
+                </h2>
+
+                <div id="listaReportes"></div>
+
+                <button
+                    class="boton-atras"
+                    onclick="volverPanelDirector()"
+                >
+                    ⬅️ Volver al panel
+                </button>
+
+            </div>
+
+
+            <!-- SECCIÓN DE PUBLICACIÓN -->
+<div
+    id="seccionPublicacion"
+    class="seccion-publicacion"
+    style="display: none;"
+>
+
+    <h2>📰 Publicar información</h2>
+
+    <!-- PUBLICACIÓN ACTUAL -->
+    <div
+        id="publicacionActual"
+        class="publicacion-actual"
+        style="display: none;"
+    >
+
+        <h3>📌 Publicación actual</h3>
+
+        <div class="vista-publicacion">
+
+            <h4 id="tituloActual"></h4>
+
+            <img
+                id="imagenActual"
+                src=""
+                alt="Publicación actual"
+            >
+
+            <p id="descripcionActual"></p>
+
+        </div>
+
+        <div class="botones-publicacion-actual">
+
+            <button
+                class="boton-editar"
+                onclick="editarPublicacion()"
+            >
+                ✏️ Editar
+            </button>
+
+            <button
+                class="boton-eliminar"
+                onclick="eliminarPublicacion()"
+            >
+                🗑️ Eliminar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- NUEVA PUBLICACIÓN -->
+    <div class="nueva-publicacion">
+
+        <h3>➕ Nueva publicación</h3>
+
+        <p>
+            Cree una nueva información para la prevención del bullying.
+        </p>
+
+
+        <label for="tituloPublicacion">
+            Título:
+        </label>
+
+        <input
+            type="text"
+            id="tituloPublicacion"
+            placeholder="Escribe el título"
+        >
+
+
+        <label for="textoPublicacion">
+            Mensaje o consejo:
+        </label>
+
+        <textarea
+            id="textoPublicacion"
+            rows="5"
+            placeholder="Escribe la información que deseas compartir..."
+        ></textarea>
+
+
+        <label for="imagenPublicacion">Infografía o imagen:</label>
+
+            <div id="imagenActualEdicion" class="imagen-actual-edicion" style="display: none;">
+            <p>🖼️ Imagen actual:</p>
+            <img id="vistaImagenEdicion" src="" alt="Imagen actual">
+            </div>
+
+            <input type="file" id="imagenPublicacion" accept="image/*">
+
+
+        <div class="botones-publicacion">
+
+            <button
+                class="boton-publicar"
+                onclick="publicarInformacion()"
+            >
+                📰 Publicar
+            </button>
+
+            <button
+                class="boton-atras"
+                onclick="volverPanelDirectorDesdePublicacion()"
+            >
+                ⬅️ Volver al panel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            <!-- CERRAR SESIÓN -->
+            <button
+                class="boton-cerrar-sesion"
+                onclick="cerrarSesion()"
+            >
+                🔒 Cerrar sesión
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-institucion">
+                <strong>I.E. José Buenaventura Sepúlveda Fernández</strong>
+                <span>Cañete</span>
+            </div>
+
+            <div class="footer-producto">
+                <strong>SafeVoice © 2026</strong>
+                <span>Poniendo un alto al bullying</span>
+            </div>
+
+            <div class="footer-equipo">
+                <strong>Equipo SafetyGuard</strong>
+                <span>“Guardianes de la seguridad”</span>
+            </div>
+
+            <button
+                class="boton-admin"
+                onclick="mostrarAccesoAdmin()"
+            >
+                🔐 Acceso administrativo
+            </button>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
